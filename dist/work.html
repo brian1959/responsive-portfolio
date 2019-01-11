@@ -26,7 +26,9 @@
             <ul class='menu-nav'>
                 <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
+                <li class="nav-item"><a href="skills.html" class="nav-link">Skills</a></li>
                 <li class="nav-item current"><a href="work.html" class="nav-link">My Work</a></li>
+             
                 <li class="nav-item"><a href="contact.html" class="nav-link">How to Reach Me</a></li>
             </ul>
         </nav>
@@ -40,68 +42,83 @@
         </h2>
         <div class="projects">
             <div class="item">
-                <a href="#!">
-                    <img src='img/projects/project1.jpg' alt="Project" />
+                <a href="./personal.html">
+                    <img src='img/projects/about.png' alt="RootsTech Clone" />
                 </a>
-                <a href='#' class='btn-light'>
-                    <i class="fab fa-eye"></i>Project
+                <a href='https://bcmccann.com/#/' class='btn-light'>
+                    <i class="fab fa-eye"></i>RootsTech Clone, a clone of the major genealogical event in the world
+                    including the schedule, speakers with bios and event details. I added a feature not currently
+                    available, the attendee can create a schedule of the events they wish to attend.<br />
                 </a>
-                <a href='#' class='btn-darkt'>
+                <a href='https://github.com/brian1959/dyf' class='btn-dark'>
                     <i class="fab fa-github"></i>Github
                 </a>
             </div>
             <div class="item">
-                <a href="#!">
-                    <img src='img/projects/project2.jpg' alt="Project" />
+                <a href="./eagelcar.html">
+                    <img src='img/projects/eaglechiro.png' alt="Project" />
                 </a>
                 <a href='#' class='btn-light'>
-                    <i class="fab fa-eye"></i>Project
+                    <i class="fab fa-eye"></i>Eagle Chiropractic is a site that I have maintained for a friend for the
+                    past 10 years.
+                    It was built with Dreamweaver and Adobe Photoshop. I did not have agithub account at the time of
+                    this project development.<br>
                 </a>
-                <a href='#' class='btn-darkt'>
-                    <i class="fab fa-github"></i>Github
+                <a href='#' class='btn-dark'>
+                    <i class="fab fa-github"></i>Built before Github
                 </a>
             </div>
             <div class="item">
-                <a href="#!">
-                    <img src='img/projects/project3.jpg' alt="Project" />
+                <a href="./group.html">
+                    <img src='img/projects/login2.png' alt="Project" />
                 </a>
-                <a href='#' class='btn-light'>
-                    <i class="fab fa-eye"></i>Project
+                <a href='https://limber.fun' class='btn-light'>
+                    <i class="fab fa-eye"></i>Limber is a web app clone of the dating app Tinder. It is a group
+                    produced project we created to utilize our combined knowledge of PostgreSQL, React, and design
+                    using CSS. Other technologies used were Node.js, express-sessions, react-motion-stack, socket.io,
+                    react-slick and HTML.
                 </a>
-                <a href='#' class='btn-darkt'>
+                <a href='#' class='btn-dark'>
                     <i class="fab fa-github"></i>Github
                 </a>
             </div>
-            <div class="item">
-                <a href="#!">
-                    <img src='img/projects/project4.jpg' alt="Project" />
-                </a>
-                <a href='#' class='btn-light'>
-                    <i class="fab fa-eye"></i>Project
-                </a>
-                <a href='#' class='btn-darkt'>
-                    <i class="fab fa-github"></i>Github
-                </a>
-            </div>
-            <div class="item">
-                <a href="#!">
-                    <img src='img/projects/project5.jpg' alt="Project" />
-                </a>
-                <a href='#' class='btn-light'>
-                    <i class="fab fa-eye"></i>Project
-                </a>
-                <a href='#' class='btn-darkt'>
-                    <i class="fab fa-github"></i>Github
-                </a>
-            </div>
+
         </div>
 
     </main>
 
-    <footer id="main-footer">
-        Copyright &copy; 2018
-    </footer>
+
     <script src="./js/main.js"></script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
 </body>
 
 </html>
